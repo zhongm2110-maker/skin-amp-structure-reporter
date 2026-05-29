@@ -1,0 +1,13 @@
+[
+    {
+        "sequence_id": "example_amp",
+        "length": 13,
+        "molecular_weight": 1480.75,
+        "cys_count": 0,
+        "lys_count": 2,
+        "arg_count": 0,
+        "hydrophobic_ratio": 0.54,
+        "net_charge_estimate_pH7": 0,
+        "amp_prediction_note": "Not obviously AMP-like"
+    }
+]
