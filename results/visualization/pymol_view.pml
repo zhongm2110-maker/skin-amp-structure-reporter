@@ -1,8 +1,8 @@
-# PyMOL 脚本 — example_structure
+# PyMOL 脚本 — defensin_like__HNMP-1___human_neutrophil_defensin_mimic__unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000
 # 由 generate_visualization_scripts.py 自动生成
 
 # 载入结构
-load /home/lsk/AMP_structure_skill/examples/input/example_structure.pdb
+load /home/lsk/AMP_structure_skill/results/predictions/defensin_like__HNMP-1___human_neutrophil_defensin_mimic__unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb
 
 # 显示设置
 hide everything
@@ -20,8 +20,8 @@ spectrum b, blue_white_red, minimum=0, maximum=100
 orient
 
 # 保存会话文件
-save example_structure_session.pse
+save defensin_like__HNMP-1___human_neutrophil_defensin_mimic__unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_session.pse
 
 # 如需导出 PNG 图片（需开启 ray tracing）：
 # ray 1200, 1200
-# png example_structure_view.png, dpi=300
+# png defensin_like__HNMP-1___human_neutrophil_defensin_mimic__unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_view.png, dpi=300

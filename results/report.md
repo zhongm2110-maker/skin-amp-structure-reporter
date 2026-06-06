@@ -1,5 +1,5 @@
 # AMP / Protein Structure Quick Report
-**生成时间:** 2026-06-05 09:25
+**生成时间:** 2026-06-06 14:20
 ---
 
 ## 1. 输入概要
@@ -50,27 +50,23 @@
 
 ## 3. 结构分析
 
-- **文件:** example_structure.pdb
+- **文件:** defensin_like__HNMP-1___human_neutrophil_defensin_mimic__unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb
 - **格式:** PDB
 - **链数:** 1
-- **残基数:** 25
-- **原子数:** 451
-- **平均 B-factor:** 0.0
-- **提示:** 
-⚠️ **注意：该结构为 NMR 结构。** NMR 结构不产 B-factor，B-factor 均为 0 不代表质量好。
-此结构的质量应查看其 20 个模型叠合后的 RMSD（均方根偏差）来评估柔性。
-简单说：B-factor 在这里不适用，请勿引用 B-factor 数值做任何结论。
+- **残基数:** 30
+- **原子数:** 237
+- **平均 B-factor:** 61.49
 
 ### 质量结论
 
-**NMR 结构** — 结构完整，但需查看 NMR ensemble 评估柔性（🟢 整体置信度可接受）
+**AlphaFold 预测结构** — 中低置信度预测，需谨慎使用（🟢 整体置信度可接受）
 
 ## 4. 下一步建议
 
-- 1. **NMR 结构** — 参考 20 个模型的 RMSD 评估柔性
+- 1. **AlphaFold 预测结构** — 低 pLDDT 区域不要过度解读
 - 2. 如需发表展示图，可用 PyMOL 打开 pymol_view.pml
 - 3. 短肽（< 30 aa）在膜环境和水溶液中构象可能不同
 - 4. 建议结合实验数据进一步验证
 
 ---
-*由 AMP Structure Reporter 自动生成，2026-06-05 09:25*
+*由 AMP Structure Reporter 自动生成，2026-06-06 14:20*

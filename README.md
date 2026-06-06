@@ -19,6 +19,20 @@ pip install biopython numpy
 bash scripts/run_demo.sh
 ```
 
+## 一键完整流程（从序列到报告）
+
+需要环境：`conda activate amp-gpu`
+```bash
+bash scripts/run_full.sh
+```
+
+这条命令自动完成：
+1. ColabFold CPU 预测结构（AMP 短肽 1-2 分钟/条）
+2. 序列分析（长度、电荷、疏水性）
+3. 结构质检（pLDDT、低置信度区域）
+4. 生成 Markdown 报告
+5. 生成 PyMOL 可视化脚本
+
 ## 脚本功能
 
 | 脚本 | 输入 → 输出 | 用途 |

@@ -85,20 +85,12 @@ def inspect(filepath: str) -> dict:
     low_count = int((bfactors < low_conf_threshold).sum()) if is_alphafold else int((bfactors > low_conf_threshold).sum())
     low_ratio = round(low_count / max(len(bfactors), 1), 3)
     bfactor_note = None
-    is_nmr = False
     if max_b == 0.0:
-        is_nmr = True
-        bfactor_note = (
-            "\n⚠️ **注意：该结构为 NMR 结构。** "
-            "NMR 结构不产 B-factor，B-factor 均为 0 不代表质量好。\n"
-            "此结构的质量应查看其 20 个模型叠合后的 RMSD（均方根偏差）来评估柔性。\n"
-            "简单说：B-factor 在这里不适用，请勿引用 B-factor 数值做任何结论。"
-        )
+        bfactor_note = "3"
 
     report = {
         "file_name": os.path.basename(filepath),
         "format": "PDB" if ext in (".pdb", ".ent") else "mmCIF",
-        "is_nmr": is_nmr,
         "is_alphafold_likely": is_alphafold,
         "chain_count": chain_count,
         "residue_count": residue_count,
@@ -137,10 +129,10 @@ def main():
     out_dir = os.path.dirname(args.out) or "."
     os.makedirs(out_dir, exist_ok=True)
 
-    with open(args.out, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+    with open(args.out, "w") as f:
+        json.dump(result, f, indent=2)
     print(f"结构分析完成 → {args.out}")
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
